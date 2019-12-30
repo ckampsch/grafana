@@ -9,7 +9,6 @@ import { beforeEach } from 'test/lib/common';
 
 import { makeMockLokiDatasource } from './mocks';
 import LokiDatasource from './datasource';
-import { FUNCTIONS } from './syntax';
 
 jest.mock('app/store/store', () => ({
   store: {
@@ -246,7 +245,7 @@ function createTypeaheadInput(
   labelKey?: string,
   anchorOffset?: number,
   wrapperClasses?: string[],
-  instance?: LokiLanguageProvider
+  instance?: LanguageProvider
 ): TypeaheadInput {
   const deserialized = Plain.deserialize(value);
   const range = deserialized.selection.setAnchor(deserialized.selection.anchor.setOffset(anchorOffset || 1));

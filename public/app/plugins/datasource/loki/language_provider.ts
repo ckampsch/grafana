@@ -13,7 +13,6 @@ import { RATE_RANGES } from '../prometheus/promql';
 
 import LokiDatasource from './datasource';
 import { CompletionItem, TypeaheadInput, TypeaheadOutput } from '@grafana/ui';
-import { ExploreMode } from 'app/types/explore';
 
 const DEFAULT_KEYS = ['job', 'namespace'];
 const EMPTY_SELECTOR = '{}';

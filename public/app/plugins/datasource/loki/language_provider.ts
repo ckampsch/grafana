@@ -167,7 +167,7 @@ export default class LokiLanguageProvider extends LanguageProvider {
   };
 
   getEmptyCompletionItems(context: TypeaheadContext): TypeaheadOutput {
-    const { history } = context;
+    const history = context?.history;
     const suggestions = [];
 
     if (history && history.length) {
